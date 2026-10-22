@@ -1,25 +1,71 @@
 aid: stratio
+
 name: Stratio
-description: 'Stratio is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by adaraventurepartners) and added to the network as a stub for full-pipeline profiling.'
+
+description: "Stratio's Decision Intelligence software helps regulated enterprises deploy AI safely. Built for banking, insurance and public administration in Europe and LATAM, it provides data governance, model monitoring, and compliance tools to enable trustworthy AI adoption across regulated sectors."
+
 url: https://raw.githubusercontent.com/api-evangelist/stratio/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- AI
+- Decision-Intelligence
+- Regulated-Enterprises
+- Data-Governance
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- adaraventurepartners
+
 common:
+- type: WellKnown
+  url: well-known/stratio-well-known.yml
+- type: Hosts
+  url: hosts/stratio-hosts.yml
+- type: TermsOfService
+  url: https://stratio.ai/legal-notice/
+- type: PrivacyPolicy
+  url: https://stratio.ai/privacy/
+- type: Leadership
+  url: https://stratio.ai/team/david-gavina/
+- type: Blog
+  url: https://stratio.ai/blog/
+- type: DomainSecurity
+  url: security/stratio-domain-security.yml
 - type: Website
   url: https://stratio.ai
+
+apis: []
+
+x-backed-by:
+- adaraventurepartners
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI or other machine-readable API contract found on stratio.ai despite checking common spec locations.
+  evidence:
+    - url: https://stratio.ai/openapi.json
+      status: 404
+  checked: '2026-10-22'
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
